@@ -13,7 +13,7 @@ class ApiUtil {
   };
 
   validateOrganization = (authorization, params) => {
-    console.log(params);
+    console.log(JSON.stringify(params));
     return new Promise((resolve) => {
       let options = {
         url: Constants.api.force.base + Constants.api.force.auth,
