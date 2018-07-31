@@ -102,7 +102,7 @@ class OrganizationController extends BaseController {
     try {
       const params = this.filterParams(req.body, this.whitelist);
 
-      const loggedIn = await ApiUtil.validateOrganization(params, next);
+      const loggedIn = await ApiUtil.validateOrganization(req.headers.authorization, params);
       if (!loggedIn) return;
 
       res.status(Util.code.ok).json(await Organization.update({ _id: params.id }, params));
