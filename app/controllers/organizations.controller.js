@@ -3,6 +3,7 @@ import Organization from '../models/organization';
 import Backup from '../models/backup';
 import Util from '../lib/util';
 import ApiUtil from '../lib/api.util';
+import ForceUtil from '../lib/force.util';
 
 class OrganizationController extends BaseController {
   whitelist = [
@@ -83,7 +84,17 @@ class OrganizationController extends BaseController {
         return next(err);
       }
 
-      res.status(Util.code.ok).json(organization);
+      const conn = await ForceUtil.login(organization, next);
+
+      const response = {
+        oauth2: {
+          instanceUrl: conn.instanceUrl,
+          accessToken: conn.accessToken,
+        },
+        organization: organization.toJSON(),
+      };
+
+      res.status(Util.code.ok).json(response);
     } catch(err) {
       // Invalid id
       err.status = err.name ==='CastError' ? Util.code.notFound : Util.code.internalServerError;
