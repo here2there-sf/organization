@@ -24,13 +24,19 @@ class OrganizationController extends BaseController {
    * @param {object} req
    * @param {object} res
    * @param {function} next
+   * @return {function} or null
    * */
   create = async (req, res, next) => {
     try {
       const params = this.filterParams(req.body, this.whitelist);
 
       const loggedIn = await ApiUtil.validateOrganization(req.headers.authorization, params, next);
-      if(!loggedIn) return;
+      if(!loggedIn) {
+        let err = new Error();
+        err.message = Util.message.salesforce.loginError;
+        err.status = Util.code.bad;
+        return next(err);
+      }
 
       let organization = new Organization({
         ...params,
