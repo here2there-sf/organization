@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b581a82-449e-46f6-a934-45d25f517050" name="Default" comment="fix">
-      <change beforePath="$PROJECT_DIR$/app/config/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/constants.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/organizations.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/organizations.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/force.util.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/force.util.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -92,11 +92,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="organizations.controller.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="organizations.controller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/organizations.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="118" column="18" lean-forward="true" selection-start-line="118" selection-start-column="18" selection-end-line="118" selection-end-column="18" />
+            <state relative-caret-position="273">
+              <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
               <folding>
                 <element signature="e#0#47#0" expanded="true" />
               </folding>
@@ -104,11 +104,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="force.util.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="force.util.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/lib/force.util.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+            <state relative-caret-position="450">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -213,9 +213,9 @@
         <option value="$PROJECT_DIR$/app/lib/api.util.js" />
         <option value="$PROJECT_DIR$/app/routes.js" />
         <option value="$PROJECT_DIR$/app/middleware/access-control-owner.js" />
-        <option value="$PROJECT_DIR$/app/lib/force.util.js" />
         <option value="$PROJECT_DIR$/app/config/constants.js" />
         <option value="$PROJECT_DIR$/app/controllers/organizations.controller.js" />
+        <option value="$PROJECT_DIR$/app/lib/force.util.js" />
       </list>
     </option>
   </component>
@@ -496,13 +496,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="246850000" />
+    <option name="totallyTimeSpent" value="247107000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1226" y="-1058" width="1920" height="1058" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14165351" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14165351" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -511,7 +511,7 @@
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32154006" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.24245578" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.24245578" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39854318" />
       <window_info anchor="bottom" id="TypeScript" order="8" />
@@ -857,16 +857,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/lib/force.util.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/constants.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="254">
@@ -886,10 +876,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/organizations.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="118" column="18" lean-forward="true" selection-start-line="118" selection-start-column="18" selection-end-line="118" selection-end-column="18" />
+        <state relative-caret-position="273">
+          <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
           <folding>
             <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/lib/force.util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>

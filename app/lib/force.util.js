@@ -16,7 +16,7 @@ class ForceUtil {
     let conn = new jsforce.Connection();
 
     try {
-      await conn.login(params.email, await EncryptionUtil.decryptText(params.password) + params.securitytoken);
+      await conn.login(params.email, params.password + params.securitytoken);
       return conn;
     } catch(err) {
       err.message = Util.message.salesforce.loginError;

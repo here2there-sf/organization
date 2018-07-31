@@ -105,7 +105,6 @@ class OrganizationController extends BaseController {
    * @param {Object} req
    * @param {Object} res
    * @param {function} next
-   * @return {function} or null
    * */
   update = async (req, res, next) => {
     let loggedIn;
