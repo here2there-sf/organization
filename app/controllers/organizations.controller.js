@@ -30,7 +30,7 @@ class OrganizationController extends BaseController {
     try {
       const params = this.filterParams(req.body, this.whitelist);
 
-      const loggedIn = await ApiUtil.validateOrganization(req.headers.authorization, params, next);
+      const loggedIn = await ApiUtil.validateOrganization(req.headers.authorization, params);
       if(!loggedIn) {
         let err = new Error();
         err.message = Util.message.salesforce.loginError;
@@ -43,7 +43,7 @@ class OrganizationController extends BaseController {
         _user: req.currentUser._id,
       });
 
-      res.status(Util.code.created).json(organization.save());
+      res.status(Util.code.created).json(await organization.save());
     } catch(err) {
       next(err);
     }

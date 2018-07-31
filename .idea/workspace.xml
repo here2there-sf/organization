@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b581a82-449e-46f6-a934-45d25f517050" name="Default" comment="fix">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/constants.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/organizations.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/organizations.controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/api.util.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/api.util.js" afterDir="false" />
     </list>
@@ -40,8 +40,8 @@
       <file leaf-file-name="constants.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/config/constants.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="46" column="6" lean-forward="true" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
+            <state relative-caret-position="283">
+              <caret line="45" column="45" lean-forward="true" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -49,8 +49,8 @@
       <file leaf-file-name="organizations.controller.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/organizations.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="27" column="7" lean-forward="true" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
+            <state relative-caret-position="332">
+              <caret line="45" column="68" lean-forward="true" selection-start-line="45" selection-start-column="68" selection-end-line="45" selection-end-column="68" />
               <folding>
                 <element signature="e#0#47#0" expanded="true" />
               </folding>
@@ -61,8 +61,8 @@
       <file leaf-file-name="api.util.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/lib/api.util.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+            <state relative-caret-position="274">
+              <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
               </folding>
@@ -156,7 +156,6 @@
         <option value="$PROJECT_DIR$/tests/routes/users/user.fetch.spec.js" />
         <option value="$PROJECT_DIR$/app/server.js" />
         <option value="$PROJECT_DIR$/app/.gitignore" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/package.json" />
@@ -168,6 +167,7 @@
         <option value="$PROJECT_DIR$/app/middleware/authenticate.js" />
         <option value="$PROJECT_DIR$/tests/routes/organizations/organization.create.spec.js" />
         <option value="$PROJECT_DIR$/app/config/constants.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/lib/api.util.js" />
         <option value="$PROJECT_DIR$/app/controllers/organizations.controller.js" />
       </list>
@@ -213,17 +213,6 @@
             <path>
               <item name="organization" type="b2602c69:ProjectViewProjectNode" />
               <item name="organization" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="organization" type="b2602c69:ProjectViewProjectNode" />
-              <item name="organization" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="organization" type="b2602c69:ProjectViewProjectNode" />
-              <item name="organization" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -374,7 +363,7 @@
       <workItem from="1532638174207" duration="3516000" />
       <workItem from="1532721817758" duration="14793000" />
       <workItem from="1532918593676" duration="1084000" />
-      <workItem from="1532928375763" duration="15148000" />
+      <workItem from="1532928375763" duration="17223000" />
     </task>
     <task id="LOCAL-00001" summary="fix">
       <created>1533006477153</created>
@@ -383,7 +372,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533006477153</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fix">
+      <created>1533006633197</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1533006633197</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -419,7 +415,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="241330000" />
+    <option name="totallyTimeSpent" value="243405000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2560" y="-97" width="2560" height="1058" extended-state="6" />
@@ -857,22 +853,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/constants.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="46" column="6" lean-forward="true" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
+        <state relative-caret-position="283">
+          <caret line="45" column="45" lean-forward="true" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/lib/api.util.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+        <state relative-caret-position="274">
+          <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
@@ -881,8 +877,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/organizations.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="27" column="7" lean-forward="true" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
+        <state relative-caret-position="332">
+          <caret line="45" column="68" lean-forward="true" selection-start-line="45" selection-start-column="68" selection-end-line="45" selection-end-column="68" />
           <folding>
             <element signature="e#0#47#0" expanded="true" />
           </folding>

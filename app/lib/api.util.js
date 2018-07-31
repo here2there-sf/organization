@@ -12,21 +12,25 @@ class ApiUtil {
     delete: 'DELETE',
   };
 
-  validateOrganization = (authorization) => {
+  validateOrganization = (authorization, params) => {
+    console.log(params);
     return new Promise((resolve) => {
       let options = {
         url: Constants.api.force.base + Constants.api.force.auth,
         method: this.method.post,
         headers: {
           'Authorization': authorization,
+          'content-type': 'application/json',
         },
+        body: JSON.stringify(params),
       };
 
+      console.log(options);
       request(options, (error, response, body) => {
         if(response.statusCode === Util.code.bad) {
           return resolve(null);
         }
-        resolve(JSON.parse(body));
+        resolve(response.statusCode);
       });
     });
   };
