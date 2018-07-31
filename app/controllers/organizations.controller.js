@@ -25,19 +25,14 @@ class OrganizationController extends BaseController {
    * @param {object} req
    * @param {object} res
    * @param {function} next
-   * @return {function} or null
    * */
   create = async (req, res, next) => {
+    let loggedIn;
     try {
       const params = this.filterParams(req.body, this.whitelist);
 
-      const loggedIn = await ApiUtil.validateOrganization(req.headers.authorization, params);
-      if(!loggedIn) {
-        let err = new Error();
-        err.message = Util.message.salesforce.loginError;
-        err.status = Util.code.bad;
-        return next(err);
-      }
+      loggedIn = await ForceUtil.login(params, next);
+      if(!loggedIn) return;
 
       let organization = new Organization({
         ...params,
@@ -47,6 +42,8 @@ class OrganizationController extends BaseController {
       res.status(Util.code.created).json(await organization.save());
     } catch(err) {
       next(err);
+    } finally {
+      loggedIn.logout();
     }
   };
 
@@ -111,20 +108,18 @@ class OrganizationController extends BaseController {
    * @return {function} or null
    * */
   update = async (req, res, next) => {
+    let loggedIn;
     try {
       const params = this.filterParams(req.body, this.whitelist);
 
-      const loggedIn = await ApiUtil.validateOrganization(req.headers.authorization, params);
-      if (!loggedIn) {
-        let err = new Error();
-        err.message = Util.message.salesforce.loginError;
-        err.status = Util.code.bad;
-        return next(err);
-      }
+      loggedIn = await ForceUtil.login(params, next);
+      if(!loggedIn) return;
 
       res.status(Util.code.ok).json(await Organization.update({ _id: params.id }, params));
     } catch(err) {
       next(err);
+    } finally {
+      loggedIn.logout();
     }
   };
 

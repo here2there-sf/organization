@@ -47,7 +47,6 @@ const defaultConfig = {
     },
     force: {
       base: process.env.FORCE_BASE || 'https://here2there-force.herokuapp.com',
-      auth: process.env.FORCE_AUTH || '/authenticate',
     },
   },
   encryption: {
