@@ -29,7 +29,7 @@ class OrganizationController extends BaseController {
     try {
       const params = this.filterParams(req.body, this.whitelist);
 
-      const loggedIn = await ApiUtil.validateOrganization(req, params, next);
+      const loggedIn = await ApiUtil.validateOrganization(req.headers.authorization, params, next);
       if(!loggedIn) return;
 
       let organization = new Organization({
