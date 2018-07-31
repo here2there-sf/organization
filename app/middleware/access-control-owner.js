@@ -9,12 +9,19 @@ class AccessControlOwner {
   organization = () => {
     return (req, res, next) => authenticate(req, res, async (err) => {
       try {
-        await Organization.find({
+        const organization = await Organization.findOne({
           $and: [
             { _user: req.currentUser._id },
             { _id: req.body.id },
           ],
         });
+        if (!organization) {
+          let err = new Error();
+          err.message = Util.message.organization.notFound;
+          err.status = Util.code.notFound;
+          return next(err);
+        }
+
         next();
       } catch(err) {
         err.message = Util.message.organization.notFound;
