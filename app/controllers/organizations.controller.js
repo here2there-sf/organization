@@ -81,7 +81,7 @@ class OrganizationController extends BaseController {
         return next(err);
       }
 
-      const conn = await ForceUtil.login(organization, next);
+      const conn = await ForceUtil.loginEncrypted(organization, next);
 
       const response = {
         oauth2: {
