@@ -37,7 +37,7 @@ const OrganizationSchema = new Schema({
     type: String,
     required: [true, 'Password is required.'],
   },
-  securitytoken: {
+  securityToken: {
     type: String,
     required: [true, 'Security Token is required.'],
   },
@@ -63,7 +63,7 @@ OrganizationSchema.set('toJSON', {
     delete obj._user;
 
     delete obj.password;
-    delete obj.securitytoken;
+    delete obj.securityToken;
     delete obj.__v;
 
     return obj;
@@ -73,12 +73,24 @@ OrganizationSchema.set('toJSON', {
 OrganizationSchema
   .pre('save', async function(done) {
     // Encrypt password before saving the document
-    if (this.isModified('password')) {
-      this.password = await EncryptionUtil.encryptText(this.password);
-      done();
-    } else {
-      done();
-    }
+    await new Promise(async (resolve) => {
+      if (this.isModified('password')) {
+        this.password = await EncryptionUtil.encryptText(this.password);
+        resolve();
+      } else {
+        resolve();
+      }
+    });
+    // Encrypt securityToken before saving the document
+    await new Promise(async (resolve) => {
+      if (this.isModified('securityToken')) {
+        this.securityToken = await EncryptionUtil.encryptText(this.securityToken);
+        resolve();
+      } else {
+        resolve();
+      }
+    });
+    done();
   });
 
 OrganizationSchema.statics = {

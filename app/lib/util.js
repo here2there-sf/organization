@@ -12,9 +12,6 @@ class Util {
     metadata: {
       notFound: 'Metadata was not found.',
     },
-    backup: {
-      notFound: 'Backup was not found.',
-    },
   };
 
   code = {

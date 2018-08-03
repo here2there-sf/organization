@@ -16,7 +16,7 @@ class ForceUtil {
     let conn = new jsforce.Connection();
 
     try {
-      await conn.login(params.email, params.password + params.securitytoken);
+      await conn.login(params.email, params.password + params.securityToken);
       return conn;
     } catch(err) {
       err.message = Util.message.salesforce.loginError;
@@ -30,7 +30,8 @@ class ForceUtil {
     let conn = new jsforce.Connection();
 
     try {
-      await conn.login(params.email, await EncryptionUtil.decryptText(params.password) + params.securitytoken);
+      await conn.login(params.email,
+        await EncryptionUtil.decryptText(params.password) + await EncryptionUtil.decryptText(params.securityToken));
       return conn;
     } catch(err) {
       err.message = Util.message.salesforce.loginError;

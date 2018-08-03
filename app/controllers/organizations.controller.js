@@ -1,8 +1,6 @@
 import BaseController from './base.controller';
 import Organization from '../models/organization';
-import Backup from '../models/backup';
 import Util from '../lib/util';
-import ApiUtil from '../lib/api.util';
 import ForceUtil from '../lib/force.util';
 
 class OrganizationController extends BaseController {
@@ -11,7 +9,7 @@ class OrganizationController extends BaseController {
     'alias',
     'email',
     'password',
-    'securitytoken',
+    'securityToken',
     'type',
   ];
 
@@ -131,7 +129,7 @@ class OrganizationController extends BaseController {
   delete = async (req, res, next) => {
     try {
       const params = this.filterParams(req.body, this.deleteWhiteList);
-      await Backup.remove({ _organization: params.id });
+      // await Backup.remove({ _organization: params.id });
       await Organization.remove({ _id: params.id });
       res.sendStatus(Util.code.deleted);
     } catch(err) {
